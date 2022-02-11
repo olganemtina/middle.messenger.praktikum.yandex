@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./profile.scss">
+    </head>
+    <body>
+    <div id="entry-template" class="content-center-wrapper padding-15">
+        <div class="profile_container">
+            <div class="header text-align-center">
+                Персональные данные {{test}}</p>
+            </div>
+            <div>
+                <div class="avatar margin-bottom-50"></div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Имя</div>
+                    <div class="flex-element-align-right">
+                            {{profile.first_name}}
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Фамилия</div>
+                    <div class="flex-element-align-right">
+                           {{profile.second_name}}
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Телефон</div>
+                    <div class="flex-element-align-right">
+                            {{profile.phone}}
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Логин</div>
+                    <div class="flex-element-align-right">
+                            {{profile.login}}
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Почта</div>
+                    <div class="flex-element-align-right">
+                            {{profile.email}}
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <div class="width-50-percent label">Имя в чате</div>
+                    <div class="flex-element-align-right">
+                            {{profile.display_name}}
+                    </div>
+                </div>  
+                <div class="margin-top-25 margin-bottom-25">
+                    <a href="/src/pages/profile/edit.hbs" class="link">Изменить данные</a>
+                </div>                 
+            </div>
+        </div>
+    </div>
+    </body>
+</html> 

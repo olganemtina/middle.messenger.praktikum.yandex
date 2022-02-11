@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./profile.scss">
+    </head>
+    <body class="content-center-wrapper">
+        <div class="profile_container">
+            <div class="header text-align-center">
+                Сброс пароля
+            </div>
+            <div>
+                <form action="">
+                    <div class="profile-item">
+                        <div class="width-50-percent label">Текущий пароль</div>
+                        <div class="flex-element-align-right">
+                             <input type="password" value={{profile.password}} class="profile-input" name="old_password">
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <div class="width-50-percent label">Новый пароль</div>
+                        <div class="flex-element-align-right">
+                             <input type="password" value={{profile.new_password}} class="profile-input" name="new_password">
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <div class="width-50-percent label">Подтверждение</div>
+                        <div class="flex-element-align-right">
+                             <input type="password" value={{profile.new_password2}} class="profile-input" name="new_password2">
+                        </div>
+                    </div>   
+                    <div class="margin-top-25 margin-bottom-25">
+                        <a href="/src/pages/profile/index.hbs" class="link">К профилю</a>
+                    </div>   
+                    <div class="profile-data-item margin-top-50">
+                        <button class="button">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html> 
