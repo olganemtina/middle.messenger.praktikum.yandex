@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "parcel build src/*/*/*.hbs",
+    "build": "parcel build src/index.hbs src/*/*/*.hbs",
     "dev:client": "parcel src/**/**/*.hbs",
     "dev:server": "node ./server.js",
     "dev": "npm run dev:client && npm run dev:server",
