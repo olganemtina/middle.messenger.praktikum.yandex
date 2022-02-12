@@ -1,25 +1,25 @@
 @import "../../styles/style.scss";
 
-.profile_container{
-    background:$bgFormColor;
-    width: 870px;
-    padding: 40px;
+.profile_container {
+	background: $bgFormColor;
+	width: 870px;
+	padding: 40px;
 }
 
-.profile-item{
-    padding-top: 22px;
-    padding-bottom: 22px;
-    display: flex;
-    border-bottom: 1px solid $bgColorLine;;
+.profile-item {
+	padding-top: 22px;
+	padding-bottom: 22px;
+	display: flex;
+	border-bottom: 1px solid $bgColorLine;
 }
 
-.profile-input{
-    all: unset;
-    text-align: right;
-    color: $fontMain;
-    font-size: 14px;
+.profile-input {
+	all: unset;
+	text-align: right;
+	color: $fontMain;
+	font-size: 14px;
 }
 
 .avatar:hover > .hide {
-    display: block;
+	display: block;
 }

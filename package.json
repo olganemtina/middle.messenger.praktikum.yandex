@@ -6,8 +6,8 @@
     "build": "parcel build src/*/*/*.hbs",
     "dev:client": "parcel src/**/**/*.hbs",
     "dev:server": "node ./server.js",
-    "dev": "npm run dev:client && node ./server.js",
-    "start": "node ./server.js",
+    "dev": "npm run dev:client && npm run dev:server",
+    "start": "npm run dev:server",
     "prestart": "parcel build src/index.hbs src/**/**/*.hbs"
   },
   "author": "",
