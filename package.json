@@ -1,0 +1,30 @@
+{
+  "name": "sprint_1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "parcel build src/index.hbs src/*/*/*.hbs",
+    "dev:client": "parcel src/**/**/*.hbs",
+    "dev:server": "node ./server.js",
+    "dev": "npm run dev:client && npm run dev:server",
+    "start": "npm run dev:server",
+    "prestart": "parcel build src/index.hbs src/**/**/*.hbs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@parcel/transformer-sass": "^2.3.0",
+    "express": "^4.17.2",
+    "parcel": "^2.3.0"
+  },
+  "dependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@parcel/transformer-sass": "^2.3.0",
+    "express": "^4.17.2",
+    "parcel": "^2.3.0"
+  },
+  "engines" : { 
+    "node" : ">=16.13.1" 
+  }
+}

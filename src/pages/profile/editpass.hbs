@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Редактирование пароля</title>
+		<link rel="stylesheet" href="./profile.scss" />
+	</head>
+	<body>
+		<main class="content-center-wrapper">
+			<div class="profile_container">
+				<h1 class="text-align-center">
+					Сброс пароля
+				</h1>
+				<div>
+					<form action="">
+						<div class="profile-item">
+							<div class="width-50-percent label">Текущий пароль</div>
+							<div class="flex-element-align-right">
+								<input
+									type="password"
+									value={{profile.password}}
+									class="profile-input"
+									name="old_password"
+								/>
+							</div>
+						</div>
+						<div class="profile-item">
+							<div class="width-50-percent label">Новый пароль</div>
+							<div class="flex-element-align-right">
+								<input
+									type="password"
+									value={{profile.new_password}}
+									class="profile-input"
+									name="new_password"
+								/>
+							</div>
+						</div>
+						<div class="profile-item">
+							<div class="width-50-percent label">Подтверждение</div>
+							<div class="flex-element-align-right">
+								<input
+									type="password"
+									value={{profile.new_password2}}
+									class="profile-input"
+									name="new_password2"
+								/>
+							</div>
+						</div>
+						<div class="margin-top-25 margin-bottom-25">
+							<a href="/src/pages/profile/index.hbs" class="link">К профилю</a>
+						</div>
+						<div class="profile-data-item margin-top-50">
+							<button class="button">Сохранить изменения</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

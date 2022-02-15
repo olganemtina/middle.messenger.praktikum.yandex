@@ -1,0 +1,13 @@
+@import "../../styles/style.scss", "../../styles/auth.scss";
+
+.auth_container_form {
+	background: $bgFormColor;
+	width: 50%;
+	padding: 200px 65px 65px 65px;
+}
+
+.auth-redirect-to-signup {
+	padding-top: 195px;
+	padding-bottom: 20px;
+	text-align: center;
+}
