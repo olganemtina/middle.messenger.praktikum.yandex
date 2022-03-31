@@ -20,8 +20,8 @@
     "dev:server": "node ./server.js",
     "copy-images": "copy \"src/images/users\" \"dist\"",
     "test": "parcel",
-    "dev": "npm run dev:client && npm run copy-images",
-    "start": "npm run dev:client && npm run copy-images && npm run dev:server",
+    "dev": "npm run dev:client",
+    "start": "npm run dev:client && npm run dev:server",
     "lint": "eslint . --ext .ts",
     "stylelint": "stylelint \"**/**/*.scss\" --fix"
   },
@@ -34,6 +34,7 @@
     "@types/node": "^17.0.21",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "copy-files-from-to": "^3.2.2",
     "eslint": "^8.9.0",
     "express": "^4.17.2",
     "stylelint-config-standard": "^25.0.0",
@@ -44,11 +45,18 @@
   },
   "dependencies": {
     "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "copy-files-from-to": "^3.2.2",
     "express": "^4.17.2",
     "nanoid": "^3.3.1",
     "parcel": "^2.3.2",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "stylelint": "^14.5.3",
     "stylelint-scss": "^4.1.0"
-  }
+  },
+  "copyFiles": [
+    {
+      "from": "src/images/users/2.png",
+      "to": "dist"
+    }
+  ]
 }
