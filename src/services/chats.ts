@@ -4,7 +4,7 @@ import { State } from '../utils/enums';
 
 export const getChats = () => {
   let data = (chats as Array<Chat>).map((x : Chat) => {
-    x.image = `../${x.id}.png`;
+    x.image = `/${x.id}.png`;
     x.status = x.status == 0 ? State.Online : State.Offline;
     return x;
   });

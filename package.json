@@ -20,8 +20,8 @@
     "dev:server": "node ./server.js",
     "copy-images": "copy \"src/images/users\" \"dist\"",
     "test": "parcel",
-    "dev": "npm run dev:client && npm run dev:server",
-    "start": "npm run dev:client && npm run dev:server",
+    "dev": "npm run dev:client && npm run copy-images",
+    "start": "npm run dev:client && npm run copy-images && npm run dev:server",
     "lint": "eslint . --ext .ts",
     "stylelint": "stylelint \"**/**/*.scss\" --fix"
   },
