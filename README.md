@@ -10,6 +10,7 @@
 Сборка проекта: npm run build
 =======
 Pull request from sprint_1: https://github.com/olganemtina/middle.messenger.praktikum.yandex/pull/1
+
 Pull request from sprint_2: https://github.com/olganemtina/middle.messenger.praktikum.yandex/pull/2
 
 
