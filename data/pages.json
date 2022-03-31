@@ -1,34 +1,34 @@
 [
     {
         "caption": "Форма авторизации",
-        "href": "/signin/index.html"
+        "href": "/pages/signin/index.html"
     },
     {
         "caption": "Форма регистрации",
-        "href": "/signup/index.html"
+        "href": "/pages/signup/index.html"
     },
     {
         "caption": "Просмотр профиля",
-        "href": "/profile/index.html"
+        "href": "/pages/profile/index.html"
     },
     {
         "caption": "Редактирование профиля",
-        "href": "/profile/index.html"
+        "href": "/pages/profile/index.html"
     },
     {
         "caption": "Редактирование пароля",
-        "href": "/profile/index.html"
+        "href": "/pages/profile/index.html"
     },
     {
         "caption": "Чат",
-        "href": "/chat/index.html"
+        "href": "/pages/chat/index.html"
     },
     {
         "caption": "404",
-        "href": "/errors/404/index.html"
+        "href": "/pages/errors/404/index.html"
     },
     {
         "caption": "500",
-        "href": "/errors/500/index.html"
+        "href": "/pages/errors/500/index.html"
     }
 ]
