@@ -1,0 +1,25 @@
+<div class="message-block height-100-percent">
+	<div class="display-flex">
+		{{{card}}}
+		<div class="width-10-percent position-relative chat-item">
+			{{{settings}}}
+		</div>
+	</div>
+	<div class="message-block-area height-inherit">
+		 {{#each messages}}
+            <div>{{{this}}}</div>
+        {{/each}}    
+	</div>
+	<div
+		class="display-flex message-block-send padding-15 flex-element-align-items-top flex-element-justify-content-space-between">
+		<div class="padding-top-15">
+			{{{attachFileBtn}}}
+		</div>
+		<div class="width-100-percent">
+			{{{messageInput}}}
+		</div>
+		<div class="padding-top-15">
+			{{{sendBtn}}}
+		</div>
+	</div>
+</div>

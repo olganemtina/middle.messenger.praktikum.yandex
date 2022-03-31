@@ -1,0 +1,130 @@
+@import "../../styles/style";
+
+.chat-list-container {
+  border-right: 1px solid $bgColorLine;
+  width: 25%;
+}
+
+.message-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.message-block-area,
+.message-block-send {
+  background: $bgFormColor;
+}
+
+.message-block-area {
+  overflow-y: scroll;
+}
+
+.message-block-send {
+  border-top: 1px solid $bgColorLine;
+}
+
+.chat-item {
+  border-bottom: 1px solid $bgColorLine;
+  padding: 15px;
+
+  @extend %display-flex;
+}
+
+.chat-item-name {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: $fontColorElement;
+}
+
+.chat-item-description {
+  font-size: 14px;
+  color: #A59999;
+}
+
+.search-input {
+  border: 1px solid $bgColorLine;
+
+  @extend %element-style-shared;
+  @extend %label-style-shared;
+}
+
+.message-input {
+  border: 1px solid $bgColorLine;
+  padding: 12px;
+}
+
+.img-button-container,
+.attach-button-container,
+.send-button-container {
+  button {
+    border: none;
+  }
+
+  :disabled {
+    opacity: 30%;
+    cursor: auto;
+  }
+
+  @extend %image-button-container-shared;
+}
+
+.settings-button-container button {
+  border: none;
+}
+
+.attach-button-container {
+  background: $bgColor;
+}
+
+.send-button-container {
+  background: $bgColorElement;
+}
+
+.add-user-img,
+.attach-img,
+.send-img,
+.more-img {
+  @extend %icon-in-button-shared;
+}
+
+.add-user-img {
+  background: url("../../images/add-user.svg");
+  filter: $svgColorFilter;
+}
+
+.attach-img {
+  background: url("../../images/attach.png");
+  filter: $svgColorFilter;
+}
+
+.send-img {
+  background: url("../../images/send.png");
+}
+
+.more-img {
+  background: url("../../images/more.png");
+  background-repeat: no-repeat;
+}
+
+.message-incoming,
+.message-outgoing {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 25px 25px 0;
+  width: 50%;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message-incoming {
+  margin-left: 15px;
+  background: $bgColor;
+}
+
+.message-outgoing {
+  margin-right: 15px;
+  margin-left: auto;
+  background: $bgColorMessage;
+}

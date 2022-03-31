@@ -2,29 +2,52 @@
   "name": "sprint_1",
   "version": "1.0.0",
   "description": "",
+  "source": [
+    "src/pages/signin/index.html",
+    "src/pages/signup/index.html",
+    "src/pages/chat/index.html",
+    "src/pages/profile/index.html",
+    "src/pages/profile/edit.html",
+    "src/pages/profile/editpass.html",
+    "src/pages/errors/404/index.html",
+    "src/pages/errors/500/index.html"
+  ],
   "scripts": {
-    "build": "parcel build src/index.hbs src/*/*/*.hbs",
-    "dev:client": "parcel src/**/**/*.hbs",
+    "prebuild": "",
+    "build": "parcel build",
+    "dev:client": "npm run build",
     "dev:server": "node ./server.js",
+    "copy-images": "copy \"src/images/users\" \"dist\"",
+    "test": "parcel",
     "dev": "npm run dev:client && npm run dev:server",
-    "start": "npm run dev:server",
-    "prestart": "parcel build src/index.hbs src/**/**/*.hbs"
+    "start": "npm run dev:client && npm run dev:server",
+    "lint": "eslint . --ext .ts",
+    "stylelint": "stylelint \"**/**/*.scss\" --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@parcel/transformer-sass": "^2.3.0",
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "@parcel/transformer-sass": "^2.3.2",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.9.0",
     "express": "^4.17.2",
-    "parcel": "^2.3.0"
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@parcel/transformer-sass": "^2.3.0",
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
     "express": "^4.17.2",
-    "parcel": "^2.3.0"
-  },
-  "engines" : { 
-    "node" : ">=16.13.1" 
+    "nanoid": "^3.3.1",
+    "parcel": "^2.3.2",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "stylelint": "^14.5.3",
+    "stylelint-scss": "^4.1.0"
   }
 }
