@@ -10,7 +10,8 @@
     "src/pages/profile/edit.html",
     "src/pages/profile/editpass.html",
     "src/pages/errors/404/index.html",
-    "src/pages/errors/500/index.html"
+    "src/pages/errors/500/index.html",
+    "src/index.html"
   ],
   "scripts": {
     "prebuild": "",
