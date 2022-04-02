@@ -1,44 +1,40 @@
-import { METHODS } from './enums';
+import { HTTPMETHODS } from "./enums";
 
 interface IOptions {
-    timeout: number;
-    data: any;
-    headers: object;
-    method: string;
+  timeout: number;
+  data: any;
+  headers: object;
+  method: HTTPMETHODS;
 }
 
 function queryStringify(data: any) {
   const jsonString = Object.keys(data)
     .map((key) => `${key}=${data[key]}`)
-    .join('&');
+    .join("&");
   return jsonString;
 }
 
 class HTTPTransport {
-  get = (url: string, options: IOptions) => this.request(
-    url,
-    { ...options, method: METHODS.GET },
-    options.timeout,
-  );
+  get = (url: string, options: IOptions) =>
+    this.request(url, { ...options, method: HTTPMETHODS.GET }, options.timeout);
 
   // PUT, POST, DELETE
-  put = (url: string, options: IOptions) => this.request(
-    url,
-    { ...options, method: METHODS.PUT },
-    options.timeout,
-  );
+  put = (url: string, options: IOptions) =>
+    this.request(url, { ...options, method: HTTPMETHODS.PUT }, options.timeout);
 
-  post = (url: string, options: IOptions) => this.request(
-    url,
-    { ...options, method: METHODS.POST },
-    options.timeout,
-  );
+  post = (url: string, options: IOptions) =>
+    this.request(
+      url,
+      { ...options, method: HTTPMETHODS.POST },
+      options.timeout
+    );
 
-  delete = (url: string, options: IOptions) => this.request(
-    url,
-    { ...options, method: METHODS.DELETE },
-    options.timeout,
-  );
+  delete = (url: string, options: IOptions) =>
+    this.request(
+      url,
+      { ...options, method: HTTPMETHODS.DELETE },
+      options.timeout
+    );
 
   // options:
   // headers — obj
@@ -48,7 +44,7 @@ class HTTPTransport {
 
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      if (method === METHODS.GET && data) {
+      if (method === HTTPMETHODS.GET && data) {
         let jsonData = queryStringify(data);
         url += `?${jsonData}`;
       }
@@ -59,24 +55,22 @@ class HTTPTransport {
       };
 
       xhr.onabort = function () {
-        reject(new Error('Отменено'));
+        reject(new Error("Отменено"));
       };
       xhr.onerror = function () {
-        reject(new Error('Ошибка'));
+        reject(new Error("Ошибка"));
       };
       xhr.ontimeout = function () {
-        reject(new Error('Таймаут'));
+        setTimeout(() => {
+          reject(new Error("Таймаут"));
+        }, timeout);
       };
 
-      if (method === METHODS.GET || !data) {
+      if (method === HTTPMETHODS.GET || !data) {
         xhr.send();
       } else {
         xhr.send(data);
       }
-
-      setTimeout(() => {
-        reject(new Error('Таймаут'));
-      }, timeout);
     });
   };
 }

@@ -1,11 +1,11 @@
-import render from '../../../utils/renderDOM';
-import ErrorPage from '../error';
+import render from "../../../utils/renderDOM";
+import ErrorPage from "../error";
 
-document.addEventListener('DOMContentLoaded', () => {
-  let form = new ErrorPage({
+document.addEventListener("DOMContentLoaded", () => {
+  const form = new ErrorPage({
     errorCode: 404,
-    errorText: 'Страница не найдена.',
+    errorText: "Страница не найдена.",
   });
-  let root = document.querySelector('.content-center-wrapper') as HTMLElement;
+  const root = document.querySelector(".content-center-wrapper") as HTMLElement;
   render(root, form);
 });

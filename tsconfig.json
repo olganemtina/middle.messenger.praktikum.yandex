@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-		"experimentalDecorators": true,
-		"allowJs": false,
-		"noImplicitAny": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "sourceMap": true,
-		"strictNullChecks": true,
-        "target": "es5",
-        "lib": ["esnext", "dom"],
-        "esModuleInterop": true
-    }
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowJs": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true
+  }
 }

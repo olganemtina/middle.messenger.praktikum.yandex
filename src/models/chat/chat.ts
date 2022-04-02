@@ -1,5 +1,5 @@
-import { State } from '../../utils/enums';
-import Message from './message';
+import { State } from "../../utils/enums";
+import Message from "./message";
 
 export default class Chat {
   id: number;
@@ -12,5 +12,5 @@ export default class Chat {
 
   image: any;
 
-  status: State | null;
+  status?: State;
 }

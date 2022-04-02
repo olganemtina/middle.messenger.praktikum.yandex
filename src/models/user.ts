@@ -1,21 +1,21 @@
 export default class User {
   id: number;
 
-  first_name: string | undefined;
+  first_name?: string;
 
-  second_name: string | undefined;
+  second_name?: string;
 
   image: any;
 
-  phone: string | undefined;
+  phone?: string;
 
-  login: string | undefined;
+  login?: string;
 
-  email: string | undefined;
+  email?: string;
 
-  display_name: string | undefined;
+  display_name?: string;
 
-  password: string | undefined;
+  password?: string;
 
   newPassword: string;
 

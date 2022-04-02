@@ -1,5 +1,5 @@
-import UserContoler from '../controllers/userController';
-import User from '../models/user';
-import Users from '../../data/users.json';
+import Users from "../../data/users.json";
+import User from "../models/user";
 
-export const getCurrentUser = () => (Users as Array<User>).find((x) => x.id == 1);
+export const getCurrentUser = () =>
+  (Users as Array<User>).find((x) => x.id == 1);

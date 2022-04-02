@@ -1,8 +1,8 @@
-import render from '../../utils/renderDOM';
-import ChatPage from './chat';
+import render from "../../utils/renderDOM";
+import ChatPage from "./chat";
 
-document.addEventListener('DOMContentLoaded', () => {
-  let page = new ChatPage();
-  let root = document.querySelector('.width-100-percent') as HTMLElement;
+document.addEventListener("DOMContentLoaded", () => {
+  const page = new ChatPage();
+  const root = document.querySelector(".width-100-percent") as HTMLElement;
   render(root, page);
 });

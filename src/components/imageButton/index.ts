@@ -1,13 +1,13 @@
-import Block from '../../utils/block';
-import render from '../../utils/renderDOM';
-import tmp from './index.hbs';
+import Block from "../../utils/block";
+import render from "../../utils/renderDOM";
+import tmp from "./index.hbs";
 
 interface ImageButtonProps {
-	containerClassName: string;
-    imgClassName: string;
-	events?:{
-		click: (evt : Event)=>void
-	}
+  containerClassName: string;
+  imgClassName: string;
+  events?: {
+    click: (evt: Event) => void;
+  };
 }
 
 export default class ImageButton extends Block {
@@ -16,7 +16,7 @@ export default class ImageButton extends Block {
   }
 
   renderDom() {
-    let container = (document.getElementById(this.element.id) as HTMLElement);
+    let container = document.getElementById(this.element.id);
     if (container) {
       let root = container.parentElement as HTMLElement;
       render(root, this);

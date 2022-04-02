@@ -1,8 +1,11 @@
-export enum State { Online, Offline }
+export enum State {
+  Online,
+  Offline,
+}
 
-export const METHODS = {
-  GET: 'GET',
-  POST: 'POST',
-  PUT: 'PUT',
-  DELETE: 'DELETE',
-};
+export enum HTTPMETHODS {
+  GET = "GET",
+  POST = "POST",
+  PUT = "PUT",
+  DELETE = "DELETE",
+}

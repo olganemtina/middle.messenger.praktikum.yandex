@@ -1,16 +1,16 @@
-import { nanoid } from 'nanoid';
-import EventBus from './eventBus';
+import { nanoid } from "nanoid";
+import EventBus from "./eventBus";
 
 interface Meta {
-	props: object;
+  props: object;
 }
 
 export default class Block {
   static EVENTS = {
-    INIT: 'init',
-    FLOW_CDM: 'flow:component-did-mount',
-    FLOW_RENDER: 'flow:render',
-    FLOW_CDU: 'flow:component-did-update',
+    INIT: "init",
+    FLOW_CDM: "flow:component-did-mount",
+    FLOW_RENDER: "flow:render",
+    FLOW_CDU: "flow:component-did-update",
   };
 
   _element: HTMLElement;
@@ -26,10 +26,10 @@ export default class Block {
   eventBus;
 
   /** JSDoc
-	 * @param {Object} props
-	 *
-	 * @returns {void}
-	 */
+   * @param {Object} props
+   *
+   * @returns {void}
+   */
   constructor(propsAndChildren = {}) {
     const eventBus = new EventBus();
     let { props, children } = this.getChildren(propsAndChildren);
@@ -105,7 +105,10 @@ export default class Block {
     Object.entries(propsAndChildren).map(([key, value]) => {
       if (value instanceof Block) {
         children[key] = value;
-      } else if (Array.isArray(value) && value.every((x) => x instanceof Block)) {
+      } else if (
+        Array.isArray(value) &&
+        value.every((x) => x instanceof Block)
+      ) {
         children[key] = value;
       } else {
         props[key] = value;
@@ -152,7 +155,7 @@ export default class Block {
       },
       deleteProperty(target: object, prop: string) {
         if (target[prop as keyof typeof target]) {
-          throw Error('нет доступа');
+          throw Error("нет доступа");
         }
         return true;
       },
@@ -168,12 +171,14 @@ export default class Block {
 
   compile(temlate: (context: any) => string, context: any) {
     let fragment = this._createDocumentElement(
-      'template',
+      "template"
     ) as HTMLTemplateElement;
 
     Object.entries(this.children).forEach(([key, child]) => {
       if (Array.isArray(child)) {
-        context[key] = child.map((x) => `<div data-id="id-${(x as Block).id}"></div>`);
+        context[key] = child.map(
+          (x) => `<div data-id="id-${(x as Block).id}"></div>`
+        );
         return;
       }
       context[key] = `<div data-id="id-${(child as Block).id}"></div>`;
@@ -188,7 +193,7 @@ export default class Block {
       if (Array.isArray(child)) {
         child.forEach((x) => {
           stub = fragment.content.querySelector(
-            `[data-id="id-${(x as Block).id}"]`,
+            `[data-id="id-${(x as Block).id}"]`
           );
           if (!stub) {
             return;
@@ -199,7 +204,7 @@ export default class Block {
       }
 
       stub = fragment.content.querySelector(
-        `[data-id="id-${(child as Block).id}"]`,
+        `[data-id="id-${(child as Block).id}"]`
       );
 
       if (!stub) {
@@ -215,7 +220,7 @@ export default class Block {
     let { events } = this.props as any;
     if (events) {
       Object.entries(events).forEach(([event, handler]) => {
-        this._element.removeEventListener(event, (handler as any));
+        this._element.removeEventListener(event, handler as any);
       });
     }
   }
@@ -224,16 +229,16 @@ export default class Block {
     let { events } = this.props as any;
     if (events) {
       Object.entries(events).forEach(([event, handler]) => {
-        this._element.addEventListener(event, (handler as any), true);
+        this._element.addEventListener(event, handler as any, true);
       });
     }
   }
 
   show() {
-    (this.element as HTMLElement).style.display = 'block';
+    (this.element as HTMLElement).style.display = "block";
   }
 
   hide() {
-    (this.element as HTMLElement).style.display = 'none';
+    (this.element as HTMLElement).style.display = "none";
   }
 }

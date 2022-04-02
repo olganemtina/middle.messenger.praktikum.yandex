@@ -1,4 +1,4 @@
-import { getCurrentUser } from '../services/users';
+import { getCurrentUser } from "../services/users";
 
 export default class UserContoler {
   getCurrentUser() {

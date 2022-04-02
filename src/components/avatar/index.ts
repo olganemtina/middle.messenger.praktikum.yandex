@@ -1,11 +1,11 @@
-import Block from '../../utils/block';
-import tmp from './index.hbs';
+import Block from "../../utils/block";
+import tmp from "./index.hbs";
 
 interface AvatarProps {
-	src: any;
-	alt: string;
-    className: string;
-	statusClassName: string;
+  src: any;
+  alt: string;
+  className: string;
+  statusClassName: string;
 }
 
 export default class Badge extends Block {
