@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "first_name": "Ольга",
+    "second_name": "Немтина",
+    "phone": "89124638899",
+    "login": "studio191",
+    "display_name": "Ольга",
+    "email": "studio191@yandex.ru",
+    "password": "12345",
+    "newPassword": "***",
+    "newPassword2": "***"
+  }
+]

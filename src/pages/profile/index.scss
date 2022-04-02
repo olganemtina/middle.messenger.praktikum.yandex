@@ -1,0 +1,26 @@
+@import "../../styles/style";
+@import "../../styles/auth";
+
+.profile-container {
+  padding: 40px;
+  width: 870px;
+  background: $bgFormColor;
+}
+
+.profile-item {
+  display: flex;
+  border-bottom: 1px solid $bgColorLine;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.profile-input {
+  all: unset;
+  font-size: 14px;
+  text-align: right;
+  color: $fontMain;
+}
+
+.avatar:hover > .hide {
+  display: block;
+}

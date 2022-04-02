@@ -1,22 +1,23 @@
-.auth_container {
-	background: $bgFormColor;
-	width: 1170px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-	flex-direction: row-reverse;
+.auth-container {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 1170px;
+  background: $bgFormColor;
 }
 
-.auth_container_more {
-	background: url(../../images/signin_bg.jpg);
-	background-size: cover;
-	width: 50%;
-	background-position: center;
+.auth-container-more {
+  width: 50%;
+  background: url("../../images/signin_bg.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .auth-input {
-	@extend %element-style-shared;
-	@extend %label-style-shared;
-	border: 1px solid $bgColorLine;
-	margin-bottom: 20px;
+  margin-bottom: 20px;
+  border: 1px solid $bgColorLine;
+
+  @extend %element-style-shared;
+  @extend %label-style-shared;
 }

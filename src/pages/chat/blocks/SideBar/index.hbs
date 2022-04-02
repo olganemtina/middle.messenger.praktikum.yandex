@@ -1,0 +1,13 @@
+<div class="chat-list-container">
+    <div class="display-flex flex-element-align-items-center margin-top-15">
+        <div class="padding-left-15">{{{avatar}}}</div>
+        <div class="padding-left-15">{{{anchor}}}</div>
+        <div class="padding-right-15 flex-element-align-right">{{{addChatBtn}}}</div>
+    </div>
+    <div>
+        {{{searchInput}}}
+        {{#each chats}}
+            <div>{{{this}}}</div>
+        {{/each}}        
+    </div>
+</div>
